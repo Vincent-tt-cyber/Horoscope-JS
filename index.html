@@ -4,12 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Гороскоп</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
+    <h1>Гороскоп</h1>
     <label>Введите дату рождения:</label>
-    <input type="date" />
-
+    <input type="date" class="birth-date" />
+    <div class="radio-group">
+      <label>
+        <input type="radio" name="day" value="today" checked /> Сегодня
+      </label>
+      <label> <input type="radio" name="day" value="today" /> Завтра </label>
+      <label>
+        <input type="radio" name="day" value="today" /> Послезавтра
+      </label>
+    </div>
+    <button class="getHoroscope">Получить гороскоп</button>
+    <div class="result"></div>
     <script src="./js/⊗jsPrStHrs.js"></script>
   </body>
 </html>
