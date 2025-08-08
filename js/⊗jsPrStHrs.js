@@ -113,6 +113,7 @@ function showHoroscope() {
   if (!birthDateInput) {
     document.querySelector(".result").textContent = "Введите дату рождения!";
   }
+
   const birthDate = new Date(birthDateInput);
 
   // Получение знака зодиака
