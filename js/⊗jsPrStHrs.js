@@ -157,6 +157,7 @@ function showHoroscope() {
 
   let currentDate = new Date();
   let date;
+
   const birthDate = new Date(birthDateInput);
 
   // Получение знака зодиака
@@ -167,17 +168,27 @@ function showHoroscope() {
   let currentRadioButton = document.querySelector('input[name="day"]:checked');
 
   if (currentRadioButton.value == "today") {
-    currentDate = currentDate.getDate();
+    date = currentDate;
   }
   if (currentRadioButton.value == "tomorrow") {
-    currentDate = currentDate.getDate() + 1;
+    date = new Date(
+      currentDate.getFullYear(),
+      currentDate.getMonth(),
+      currentDate.getDate() + 1
+    );
   }
   if (currentRadioButton.value == "dayAfterTomorrow") {
-    currentDate = currentDate.getDate() + 2;
+    date = new Date(
+      currentDate.getFullYear(),
+      currentDate.getMonth(),
+      currentDate.getDate() + 2
+    );
   }
 
-  console.log("currentDate", currentDate);
+  // console.log("currentDate", currentDate);
   generateMonth(currentDate);
+
+  console.log("date", date);
 
   // Вывод данных
   document.querySelector(".result").innerHTML = `
